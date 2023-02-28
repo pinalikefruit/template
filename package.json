@@ -5,14 +5,16 @@
   "scripts": {
     "compile": "yarn hardhat compile",
     "deploy": "yarn hardhat deploy",
-    "test": "yarn hardhat test",
-    "test-staging": "yarn hardhat test --network goerli",
-    "lint": "yarn solhint 'contracts/*.sol'",
+    "deploy:testnet": "yarn hardhat deploy --network goerli",
+    "test:unit": "yarn hardhat test",
+    "test:staging": "yarn hardhat test --network goerli",
+    "lint": "yarn solhint 'contracts/**/*.sol' --fix",
     "lint:fix": "yarn solhint 'contracts/**/*.sol' --fix",
-    "format": "yarn prettier --write .",
+    "format": "yarn prettier --write",
     "coverage": "yarn hardhat coverage",
     "typechain": "yarn hardhat typechain"
   },
+  "license": "WTFPL",
   "devDependencies": {
     "@ethersproject/abi": "^5.4.7",
     "@ethersproject/providers": "^5.4.7",

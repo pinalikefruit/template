@@ -1,26 +1,24 @@
 export interface networkConfigItem {
     name?: string
-
-  }
-  
-export interface networkConfigInfo {
-    [key: number]: networkConfigItem
+    contractAddress?: string
 }
 
+export interface networkConfigInfo {
+    [key:number]: networkConfigItem
+}
 
 export const networkConfig: networkConfigInfo = {
-    31337: {
-        name: "localhost",
-    },
-    
-    5: {
-        name: "goerli",
-        
-    },
     1: {
         name: "mainnet",
     },
+    5: {
+        name: "goerli",
+        contractAddress: "<CONTRACT_ADDRESS>"
+    },
+    31337: {
+        name: "localhost",
+    },
 }
 
-export const developmentChains = ["hardhat", "localhost"]
+export const developmentChains = ["localhost", "hardhat"]
 export const VERIFICATION_BLOCK_CONFIRMATIONS = 6
